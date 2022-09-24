@@ -1,0 +1,103 @@
+html{
+    color:black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    height: 100%;
+}
+
+header {
+    background-color: rgb(76,83,106);
+    width: 100%;
+    left: 0;
+    display:inline-block;
+    height: 3.5rem;
+}
+
+.container-home {
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "titulo-1 titulo-1" 
+                         "foto-perfil-fede foto-perfil-mica"
+                         "cv-fede cv-mica"
+                         "titulo-2 titulo-2" ;
+}
+
+.nav {
+    color: white;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.nav:hover {
+    background-color: rgb(160,161,161);
+    }
+
+#mail, #redsoc{
+        /*background-color: white;*/
+        color: white;
+        text-decoration: none;
+        margin-right: 1rem;
+    }
+
+footer {
+    background-color: rgb(76,83,106);
+        color:white;
+        width: 100%;
+        text-align: center;
+        bottom: 0;
+        left: 0;
+        /*padding: 20px;
+        height: 50px;*/
+        margin-top: 0;
+        position:fixed;
+        max-height: 5.5rem;
+    }
+
+    form {
+        border-radius: 5px;
+        padding: 2%;
+        margin: 2% 30%;
+        text-align: justify;
+    }
+
+    label, input, form {
+        font-size: 1.0vw;
+    }
+    
+    fieldset {
+        width: 90%;
+        margin: 0 px 10px;
+        padding: 0px 10px;
+        text-align: justify;
+    }
+    
+    input[type=text], input[type=email]  {
+        width:50%;
+        padding: 2px;
+        margin: 0px;
+        display: inline;
+        border: 1px;
+        border-radius: 2px;
+        box-sizing: content-box;
+    }
+    
+   textarea {
+    width: 75%;
+   }
+    input[type=submit] {
+        background-color: rgb(160,161,161) ;
+        width: 60%;
+        border-radius: 4px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        cursor:pointer;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    
+    input[type=submit]:hover {
+        background-color: rgb(76,83,106);;
+    }
