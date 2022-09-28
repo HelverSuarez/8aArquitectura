@@ -22,7 +22,8 @@
 </nav>
 </header>
     <main>
-        <form action="#" target="_blank">
+        <form id="form" class="form" action="https://formspree.io/f/mqkjqrbp"
+              method="POST">
             <fieldset>
                 <legend><b>Datos Personales</b></legend> <br>
                 <label for="first-name">Nombre: </label> <input type="text" name="first-name" id="first-name" placeholder="Ingrese su nombre aquí..."> <br><br>
@@ -45,5 +46,27 @@
         <a href="#" target="_blank"><i id="redsoc" class="fa-brands fa-facebook-f"></i></a>
         <a href="#" target="_blank"><i id="redsoc" class="fa-brands fa-instagram"></i></a>
     </footer>
+
+    <script>
+        const $form = document.querySelector('#form')
+
+        $form.addEventListener('submit', handleSubmit)
+        
+        async function handleSubmit(event) {
+        event.preventDefault()
+        const form = new FormData(this)
+        const response = await fetch(this.action, {
+            method: this.method,
+            body: form,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        if (response.ok) {
+            this.reset()
+            alert('Gracias por contactarte con nosotros. Te responderemos a la brevedad')
+        }
+    }
+    </script>
 </body>
 </html>
