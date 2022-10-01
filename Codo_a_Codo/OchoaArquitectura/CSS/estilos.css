@@ -181,6 +181,7 @@ input[type=submit]:hover {
 
 .itemtitulo1servicios {
     grid-area: titulo1;
+    align-content: center;
 }
 
 .itemfotoconstruccion {
@@ -193,6 +194,7 @@ input[type=submit]:hover {
     grid-area: descripcionconstruccion;
     font-size: 0.8rem;
     padding-left: 10%
+    /*align-content: center;*/
 }
 
 .itemtitulo2servicios {
