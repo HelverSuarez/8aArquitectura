@@ -1,3 +1,5 @@
+
+/*CSS HTML (documento entero)*/
 html{
     color:black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -5,6 +7,7 @@ html{
     height: 100%;
 }
 
+/*CSS Header*/
 header {
     background-color: rgb(76,83,106);
     width: 100%;
@@ -13,14 +16,10 @@ header {
     height: 3.5rem;
 }
 
-.container-home {
-    display: grid;
-    grid-template-columns: repeat(2, 3fr);
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas: "titulo-1 titulo-1" 
-                         "foto-perfil-fede foto-perfil-mica"
-                         "cv-fede cv-mica"
-                         "titulo-2 titulo-2" ;
+.logo {
+    /*display: inline-block;*/
+    float:left;
+    margin-top: 15px;
 }
 
 .nav {
@@ -35,69 +34,213 @@ header {
     background-color: rgb(160,161,161);
     }
 
-#mail, #redsoc{
-        /*background-color: white;*/
-        color: white;
-        text-decoration: none;
-        margin-right: 1rem;
-    }
-
+/*CSS Footer*/
 footer {
     background-color: rgb(76,83,106);
         color:white;
         width: 100%;
         text-align: center;
-        bottom: 0;
+        /*bottom: 0;
         left: 0;
-        /*padding: 20px;
-        height: 50px;*/
+        padding: 20px;
+        height: 50px;
         margin-top: 0;
-        position:fixed;
+        /*position:fixed;*/
         max-height: 5.5rem;
+        font-size: 0.8rem;
     }
 
-    form {
-        border-radius: 5px;
-        padding: 2%;
-        margin: 2% 30%;
-        text-align: justify;
+    #mail, #redsoc{
+        color: white;
+        text-decoration: none;
+        margin-right: 1rem;
     }
 
-    label, input, form {
-        font-size: 1.0vw;
+/*CSS index.html*/
+.fotoportada {
+    padding-top:1%;
+}
+
+/*CSS contacto.html*/
+.grid-container-contacto {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "titulo1 fotoperfilfede fotoperfilmica" 
+                             "titulo1 cvfede cvmica"
+                             "titulo2 mapa direccion"
+                             "titulo3 formulario formulario";
     }
-    
-    fieldset {
-        width: 90%;
-        margin: 0 px 10px;
-        padding: 0px 10px;
-        text-align: justify;
-    }
-    
-    input[type=text], input[type=email]  {
-        width:50%;
-        padding: 2px;
-        margin: 0px;
-        display: inline;
-        border: 1px;
-        border-radius: 2px;
-        box-sizing: content-box;
-    }
-    
-   textarea {
-    width: 75%;
-   }
-    input[type=submit] {
-        background-color: rgb(160,161,161) ;
-        width: 60%;
-        border-radius: 4px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        cursor:pointer;
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-    
-    input[type=submit]:hover {
-        background-color: rgb(76,83,106);;
-    }
+
+.itemtitulo1 {
+    grid-area: titulo1;
+}
+
+.itemfotoperfilfede {
+    grid-area: fotoperfilfede;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.itemfotoperfilmica {
+    grid-area: fotoperfilmica;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.itemcvfede {
+    grid-area: cvfede;
+    font-size: 0.8rem;
+}
+
+.itemcvmica {
+    grid-area: cvmica;
+    font-size: 0.8rem;
+}
+
+.itemtitulo2 {
+    grid-area: titulo2;
+}
+
+.itemmapa {
+    grid-area: mapa;
+    padding-left: 10%;
+}
+
+.itemdireccion {
+    grid-area: direccion;
+    font-size: 0.8rem;
+}
+
+.itemtitulo3 {
+    grid-area: titulo3;
+}
+
+.form {
+    grid-area: formulario;
+}
+
+form {
+    border-radius: 5px;
+    padding: 0%;
+    margin: 2% 15%;
+    text-align: justify;
+}
+
+label, input, form {
+    font-size: 1.0vw;
+}
+
+fieldset {
+    /*width: 100%;*/
+    margin: 0 px 10px;
+    padding: 0px 10px;
+    text-align: left;
+}
+
+input[type=text], input[type=email]  {
+    width:50%;
+    padding: 2px;
+    margin: 0px;
+    display: inline;
+    border: 1px;
+    border-radius: 2px;
+    box-sizing: content-box;
+}
+
+textarea {
+width: 80%;
+}
+
+input[type=submit] {
+    background-color: rgb(160,161,161) ;
+    width: 80%;
+    border-radius: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor:pointer;
+    margin-left: 10%;
+    margin-right: 0%;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(76,83,106);
+}
+
+/*CSS servicios.html*/
+.grid-container-servicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "titulo1 descripcionconstruccion fotoconstruccion " 
+                         "titulo2 fotoneuroarquitectura descripcionneuroarquitectura1"
+                         "... descripcionneuroarquitectura2 ..."
+                         "titulo3 fotocalculoestructural descripcioncalculoestructural"
+                         "titulo4 descripcionrelevamientos fotorelevamientos";
+}
+
+.itemtitulo1servicios {
+    grid-area: titulo1;
+}
+
+.itemfotoconstruccion {
+    grid-area: fotoconstruccion;
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+.itemdescripcionconstruccion {
+    grid-area: descripcionconstruccion;
+    font-size: 0.8rem;
+    padding-left: 10%
+}
+
+.itemtitulo2servicios {
+    grid-area: titulo2;
+}
+
+.itemfotoneuroarquitectura {
+    grid-area: fotoneuroarquitectura;
+    padding-left: 10%;
+}
+
+.itemdescripcionneoroarquitectura1 {
+    grid-area: descripcionneuroarquitectura1;
+    font-size: 0.8rem;
+    padding-left: 5%
+}
+
+.itemdescripcionneoroarquitectura2 {
+    grid-area: descripcionneuroarquitectura2;
+    font-size: 0.8rem;
+    padding-left: 10%
+}
+
+.itemtitulo3servicios {
+    grid-area: titulo3;
+}
+
+.itemfotocalculoestructural {
+    grid-area: fotocalculoestructural;
+    padding-left: 10%;
+}
+
+.itemdescripcioncalculoestructural {
+    grid-area: descripcioncalculoestructural;
+    font-size: 0.8rem;
+    padding-left: 5%
+}
+
+.itemtitulo4servicios {
+    grid-area: titulo4;
+}
+.itemfotorelevamientos {
+    grid-area: fotorelevamientos;
+    padding-left: 10%;
+}
+
+.itemdescripcionrelevamientos {
+    grid-area: descripcionrelevamientos;
+    font-size: 0.8rem;
+    padding-left: 10%
+}
