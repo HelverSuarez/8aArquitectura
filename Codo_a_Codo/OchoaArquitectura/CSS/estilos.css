@@ -7,6 +7,11 @@ html{
     height: 100%;
 }
 
+h3, h2, h1 {
+    text-align: center;
+    color: rgb(47,68,100);
+}
+
 /*CSS Header*/
 header {
     background-color: rgb(76,83,106);
@@ -31,6 +36,26 @@ header {
 }
 
 .nav:hover {
+    background-color: rgb(160,161,161);
+    }
+
+.navsecundario {
+        background-color: rgb(76,83,106);
+        padding-top: 1%;
+        padding-bottom: 1%;
+        margin-bottom: 1%;
+    }
+
+#navsecundario {
+    color:white;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+#navsecundario:visited {
     background-color: rgb(160,161,161);
     }
 
@@ -170,13 +195,12 @@ input[type=submit]:hover {
 /*CSS servicios.html*/
 .grid-container-servicios {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "titulo1 descripcionconstruccion fotoconstruccion " 
-                         "titulo2 fotoneuroarquitectura descripcionneuroarquitectura1"
-                         "... descripcionneuroarquitectura2 ..."
-                         "titulo3 fotocalculoestructural descripcioncalculoestructural"
-                         "titulo4 descripcionrelevamientos fotorelevamientos";
+                         "titulo2 fotoneuroarquitectura descripcionneuroarquitectura"
+                         "titulo3 descripcioncalculoestructural fotocalculoestructural"
+                         "titulo4 fotorelevamientos descripcionrelevamientos";
 }
 
 .itemtitulo1servicios {
@@ -206,16 +230,10 @@ input[type=submit]:hover {
     padding-left: 10%;
 }
 
-.itemdescripcionneoroarquitectura1 {
-    grid-area: descripcionneuroarquitectura1;
+.itemdescripcionneoroarquitectura {
+    grid-area: descripcionneuroarquitectura;
     font-size: 0.8rem;
     padding-left: 5%
-}
-
-.itemdescripcionneoroarquitectura2 {
-    grid-area: descripcionneuroarquitectura2;
-    font-size: 0.8rem;
-    padding-left: 10%
 }
 
 .itemtitulo3servicios {
@@ -245,4 +263,123 @@ input[type=submit]:hover {
     grid-area: descripcionrelevamientos;
     font-size: 0.8rem;
     padding-left: 10%
+}
+
+/*CSS capilla.html*/
+.grid-container-capilla {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "capilla1 capilla1 datoscapilla"
+                        "capilla1 capilla1 descripcioncapilla"
+                        "capilla2 capilla2 descripcioncapilla"
+                        "capilla3 capilla4 ..."
+                        "capilla5 capilla5 ..."
+                        "capilla6 capilla7 capilla8";
+}
+
+.itemcapilla1 {
+    grid-area: capilla1;
+    text-align: center;
+}
+
+.itemdatoscapilla {
+    grid-area: datoscapilla;
+}
+
+.itemdescripcioncapilla {
+    grid-area: descripcioncapilla;
+    font-size: 0.8rem;
+}
+
+.itemcapilla2 {
+    grid-area: capilla2;
+    text-align: center;
+}
+
+.itemcapilla3 {
+    grid-area: capilla3;
+    text-align: center;
+}
+
+.itemcapilla4 {
+    grid-area: capilla4;
+    text-align: center;
+}
+
+.itemcapilla5 {
+    grid-area: capilla5;
+    text-align: center;
+}
+
+.itemcapilla6 {
+    grid-area: capilla6;
+    text-align: center;
+}
+
+.itemcapilla7 {
+    grid-area: capilla7;
+    text-align: center;
+}
+
+.itemcapilla8 {
+    grid-area: capilla8;
+    text-align: center;
+}
+
+/*CSS casa-del-peregrino.html*/
+.grid-container-casadelperegrino {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "casa-del-peregrino1 datoscasadelperegrino"
+                        "casa-del-peregrino1 descripcioncasadelperegrino"
+                        "casa-del-peregrino2 casa-del-peregrino4"
+                        "casa-del-peregrino3 casa-del-peregrino4"
+                        "casa-del-peregrino5 casa-del-peregrino5"
+                        "casa-del-peregrino6 casa-del-peregrino7";
+}
+
+.itemcasa-del-peregrino1 {
+    grid-area: casa-del-peregrino1;
+    text-align: center;
+}
+
+.itemdatoscasadelperegrino {
+    grid-area: datoscasadelperegrino;
+}
+
+.itemdescripcioncasadelperegrino {
+    grid-area: descripcioncasadelperegrino;
+    font-size: 0.8rem;
+}
+
+.itemcasa-del-peregrino2 {
+    grid-area: casa-del-peregrino2;
+    text-align: center;
+}
+
+.itemcasa-del-peregrino3 {
+    grid-area: casa-del-peregrino3;
+    text-align: center;
+}
+
+.itemcasa-del-peregrino4 {
+    grid-area: casa-del-peregrino4;
+    text-align: center;
+}
+
+.itemcasa-del-peregrino5 {
+    grid-area: casa-del-peregrino5;
+    text-align: center;
+}
+
+.itemcasa-del-peregrino6 {
+    grid-area: casa-del-peregrino6;
+    text-align: center;
+}
+
+.itemcasa-del-peregrino7 {
+    grid-area: casa-del-peregrino7;
+    text-align: center;
 }
