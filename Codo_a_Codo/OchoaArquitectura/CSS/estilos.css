@@ -383,3 +383,65 @@ input[type=submit]:hover {
     grid-area: casa-del-peregrino7;
     text-align: center;
 }
+
+/*CSS auditorio.html*/
+.grid-container-auditorio {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "auditorio1 datosauditorio"
+                        "auditorio2 auditorio2"
+                        "auditorio3 auditorio4";
+}
+
+.itemauditorio1 {
+    grid-area: auditorio1;
+    text-align: center;
+}
+
+.itemdatosauditorio {
+    grid-area: datosauditorio;
+}
+
+.itemauditorio2 {
+    grid-area: auditorio2;
+    text-align: center;
+}
+
+.itemauditorio3 {
+    grid-area: auditorio3;
+    text-align: center;
+}
+
+.itemauditorio4 {
+    grid-area: auditorio4;
+    text-align: center;
+}
+
+/*CSS sala-velatoria.html*/
+.grid-container-sala-velatoria {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "sala-velatoria1 datossalavelatoria"
+                        "sala-velatoria2 descripcionsalavelatoria";
+}
+
+.itemsalavelatoria1 {
+    grid-area: sala-velatoria1;
+    text-align: center;
+}
+
+.itemdatossalavelatoria {
+    grid-area: datossalavelatoria;
+}
+
+.itemsalavelatoria2 {
+    grid-area: sala-velatoria2;
+    text-align: center;
+}
+
+.itemdescripcionsalavelatoria {
+    grid-area: descripcionsalavelatoria;
+    font-size: 0.8rem;
+}
