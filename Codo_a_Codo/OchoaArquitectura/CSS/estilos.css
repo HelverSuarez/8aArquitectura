@@ -67,12 +67,16 @@ footer {
         text-align: center;
         /*bottom: 0;
         left: 0;
-        padding: 20px;
+        
         height: 50px;
         margin-top: 0;
         /*position:fixed;*/
-        max-height: 5.5rem;
+        /*max-height: 5.5rem;*/
         font-size: 0.8rem;
+        padding: 5px;
+        width: 100%;
+        left: 0;
+        display:inline-block;
     }
 
     #mail, #redsoc{
@@ -83,7 +87,7 @@ footer {
 
 /*CSS index.html*/
 .fotoportada {
-    padding-top:1%;
+    /*padding-top:1%;*/
 }
 
 /*CSS contacto.html*/
@@ -193,19 +197,57 @@ input[type=submit]:hover {
 }
 
 /*CSS servicios.html*/
-.grid-container-servicios {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: "titulo1 descripcionconstruccion fotoconstruccion " 
-                         "titulo2 fotoneuroarquitectura descripcionneuroarquitectura"
-                         "titulo3 descripcioncalculoestructural fotocalculoestructural"
-                         "titulo4 fotorelevamientos descripcionrelevamientos";
+
+/*768px and down*/
+@media screen and (max-width: 768px) {
+    .grid-container-servicios {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas: "titulo1"
+                             "descripcionconstruccion"  
+                             "titulo2"
+                             "descripcionneuroarquitectura"
+                             "titulo3"
+                             "descripcioncalculoestructural"
+                             "titulo4"
+                             "descripcionrelevamientos";
+    }    
 }
 
+/*768px and up*/
+@media screen and (min-width: 768px) {
+    .grid-container-servicios {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas: "titulo1 titulo1"
+                            "descripcionconstruccion fotoconstruccion" 
+                             "titulo2 titulo2"
+                             "fotoneuroarquitectura descripcionneuroarquitectura"
+                             "titulo3 titulo3"
+                             "descripcioncalculoestructural fotocalculoestructural"
+                             "titulo4 titulo4"
+                             "fotorelevamientos descripcionrelevamientos";
+    }    
+}
+
+/*992px and up*/
+@media screen and (min-width: 992px) {
+    .grid-container-servicios {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "titulo1 descripcionconstruccion fotoconstruccion " 
+                             "titulo2 fotoneuroarquitectura descripcionneuroarquitectura"
+                             "titulo3 descripcioncalculoestructural fotocalculoestructural"
+                             "titulo4 fotorelevamientos descripcionrelevamientos";
+    }    
+}
 .itemtitulo1servicios {
     grid-area: titulo1;
     align-content: center;
+    justify-content: space-evenly;
 }
 
 .itemfotoconstruccion {
@@ -217,12 +259,14 @@ input[type=submit]:hover {
 .itemdescripcionconstruccion {
     grid-area: descripcionconstruccion;
     font-size: 0.8rem;
-    padding-left: 10%
+    padding-left: 10%;
     /*align-content: center;*/
 }
 
 .itemtitulo2servicios {
     grid-area: titulo2;
+    /*justify-content: space-evenly;*/
+    align-content: center;
 }
 
 .itemfotoneuroarquitectura {
@@ -233,7 +277,7 @@ input[type=submit]:hover {
 .itemdescripcionneoroarquitectura {
     grid-area: descripcionneuroarquitectura;
     font-size: 0.8rem;
-    padding-left: 5%
+    padding-left: 5%;
 }
 
 .itemtitulo3servicios {
@@ -248,7 +292,7 @@ input[type=submit]:hover {
 .itemdescripcioncalculoestructural {
     grid-area: descripcioncalculoestructural;
     font-size: 0.8rem;
-    padding-left: 5%
+    padding-left: 5%;
 }
 
 .itemtitulo4servicios {
@@ -262,7 +306,7 @@ input[type=submit]:hover {
 .itemdescripcionrelevamientos {
     grid-area: descripcionrelevamientos;
     font-size: 0.8rem;
-    padding-left: 10%
+    padding-left: 10%;
 }
 
 /*CSS capilla.html*/
