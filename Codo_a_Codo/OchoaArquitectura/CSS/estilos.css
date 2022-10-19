@@ -18,19 +18,22 @@ header {
     width: 100%;
     left: 0;
     display:inline-block;
-    height: 3.5rem;
+    text-align: center;
+    height: 5rem;
 }
 
 .logo {
     /*display: inline-block;*/
     float:left;
+    margin-left: 1rem;
     margin-top: 15px;
+
 }
 
 .nav {
     color: white;
     border-radius: 5px;
-    margin: 5px;
+    margin: 60px;
     padding: 5px;
     text-decoration: none;
 }
@@ -88,6 +91,7 @@ footer {
 /*CSS index.html*/
 .fotoportada {
     /*padding-top:1%;*/
+    object-fit: fill;
 }
 
 /*CSS contacto.html*/
