@@ -1,4 +1,4 @@
-document.getElementsById("idheader").innerHTML=`<div class="logo"><img src="IMAGENES/logo.png" alt="Logo Ochoa Arquitectura" width="100"></div>
+document.getElementsById("idheader").innerHTML=`<div class="logo"><img src="IMAGENES/logo-banco.png" alt="Logo Ochoa Arquitectura" width="100"></div>
 <nav>
 <br>
      <a class="nav" href="index.html">Home</a>
