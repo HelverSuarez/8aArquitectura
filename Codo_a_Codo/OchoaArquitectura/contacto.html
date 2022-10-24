@@ -56,7 +56,7 @@
     </p>
 </div>
 <div class="itemtitulo3"><h2>Formulario de contacto</h2></div>
-        <form id="form" class="form" action="https://formspree.io/f/mqkjqrbp"
+        <form id="form" name="formulario" class="form" action="https://formspree.io/f/mqkjqrbp"
               method="POST">
             <fieldset>
                 <legend><b>Datos Personales</b></legend> <br>
@@ -71,13 +71,13 @@
                 <input type="radio" name="motivo-de-contacto" value="otro"> Otro
             </p> <br>
             <label for="comentario">Comentario: </label> <textarea name="comentario" id="comentario" rows="3" cols="60">"Ingrese su comentario aquí..."</textarea><br><br>
-            <input type="submit" value="Enviar">
+            <input type="submit" id="btn" name "btn" value="Enviar">
         </form>
     </main>
     <footer>
         <p><a id="mail" href="mailto:estudio-arquitectura@federico-ochoa.com">estudio-arquitectura@federico-ochoa.com</a> <br> +54 9 3544 60 9336</p>
         <a href="https://www.facebook.com/Estudio.Ochoa.Arquitectura/" target="_blank"><i id="redsoc" class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" target="_blank"><i id="redsoc" class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.instagram.com/arq.federico.ochoa/" target="_blank"><i id="redsoc" class="fa-brands fa-instagram"></i></a>
     </footer>
 
     <script>
@@ -99,7 +99,28 @@
             this.reset()
             alert('Gracias por contactarte con nosotros. Te responderemos a la brevedad')
         }
-    }
+    };
+
+    (function () {
+    var formulario = document.getElementsByName('formulario')[0],
+         elementos = formulario.elements,
+         boton = document.getElementById('btn');
+
+
+    var validarEmail = function(e){
+        if (formulario.email.value == 0) {
+            alert("Completa tu email");
+            e.preventDefault();
+        }
+    };
+
+    var validar = function(e){
+        validarEmail();
+    };
+    
+    formulario.addEventListener('submit', validar);
+}())
+
     </script>
 </body>
 </html>
